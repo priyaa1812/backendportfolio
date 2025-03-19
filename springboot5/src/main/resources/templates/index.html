@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priya's Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        
+		.navbar {
+		    background: linear-gradient(45deg, rgb(193, 149, 188), rgb(64, 0, 64), rgb(128, 128, 128));
+		}
+
+		.navbar ul {
+		    display: flex;
+		    justify-content: center;
+		    list-style: none;
+		    padding: 0;
+		    margin: 0;
+		}
+
+		.navbar ul li {
+		    padding: 10px 20px;
+		}
+
+		.brand-name {
+		    font-size: 30px;
+		    font-weight: bold;
+		    color: rgb(64, 0, 64);
+		}
+
+		.nav-link {
+		    font-family: cursive;
+		    color: rgb(27, 13, 28) !important;
+		    font-weight: bold;
+		    transition: color 0.4s ease-in-out;
+		    text-decoration: none;
+		}
+
+		.nav-link:hover {
+		    color: rgb(128, 255, 255) !important;
+		}
+		.row1 {
+				    background: url('images/prii.jpg') no-repeat center center;
+				    background-size: cover;
+				    height: 630px;
+				    animation: slideInLeftToRight 1.5s ease-out;
+				}
+
+
+				.subtitle, .title, .col {
+						    color: rgb(226, 209, 222);
+						}
+		@keyframes slideInLeftToRight {
+		    from {
+		        opacity: 0;
+		        transform: translateX(-1%);
+		    }
+		    to {
+		        opacity: 1;
+		        transform: translateX(0);
+		    }
+		}
+
+		
+
+		#internship {
+		    background: url('images/back.jpg') no-repeat center center;
+		    position: relative;
+		    font-family: papyrus;
+		    height: 650px;
+		    background-size: cover;
+		    padding: 20px;
+		}
+
+		#internship::before {
+		    content: "";
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    background: rgba(0, 0, 0, 0.5);
+		    z-index: 1;
+		}
+
+		.experience-overlay {
+		    padding-top: 30px;
+		    position: relative;
+		    z-index: 2;
+		    padding: 15px;
+		    border-radius: 10px;
+		    font-family: monaco;
+		    height: auto;
+		}
+
+		.experience-content {
+		    padding-top: 30px;
+		    display: flex;
+		    flex-direction: column;
+		    gap: 10px;
+		    width: 100%;
+		    max-width: 650px;
+		    margin: 0 auto;
+		}
+
+		.experience-item {
+		    background-color: rgba(255, 255, 255, 0.9);
+		    color: #000;
+		    padding: 10px;
+		    border-radius: 5px;
+		    animation: slideInLeft 6s ease-out infinite;
+		}
+
+		@keyframes slideInLeft {
+		    from {
+		        opacity: 0;
+		        transform: translateX(-50px);
+		    }
+		    to {
+		        opacity: 1;
+		        transform: translateX(0);
+		    }
+		}
+
+		#skills {
+		    position: relative;
+		    font-family: papyrus;
+		    height: 700px;
+		    background: url('images/co.png') no-repeat center center;
+		    background-size: cover;
+		    padding: 20px;
+		    width: 100%;
+		    overflow: hidden;
+		    font-weight: bold;
+		}
+
+		.skills-overlay {
+		    height: 500px;
+		    position: absolute;
+		    top: 130px;
+		    right: 5%;
+		    background-color: rgba(0, 0, 0, 0.7);
+		    color: #fff;
+		    padding: 15px;
+		    border-radius: 15px;
+		    font-family: monaco;
+		    width: 70%;
+		    animation: slideInRight 10s infinite;
+		}
+
+		@keyframes slideInRight {
+		    0% {
+		        transform: translateX(20%);
+		    }
+		    50% {
+		        transform: translateX(-20%);
+		    }
+		}
+
+		.skills-content {
+		    padding-top: 50px;
+		    display: flex;
+		    flex-direction: column;
+		    gap: 15px;
+		    width: 90%;
+		    margin: 0 auto;
+		}
+
+		.skill-item {
+		    background-color: rgba(255, 255, 255, 0.2);
+		    color: #000;
+		    padding: 10px;
+		    border-radius: 7px;
+		}
+
+		.skill-item h3 {
+		    color: #63b8ba;
+		    font-family: papyrus;
+		}
+
+		.skill-item meter {
+		    width: 80%;
+		    height: 20px;
+		    margin-top: 5px;
+		    background-color: #e0e0e0;
+		    border-radius: 5px;
+		    animation: pulse 2s infinite;
+		}
+
+		@keyframes pulse {
+		    0% {
+		        background-color: #c4add5;
+		    }
+		    50% {
+		        background-color: rgb(179, 206, 198);
+		    }
+		    100% {
+		        background-color: #c4add5;
+		    }
+		}
+
+		#certifications {
+		    position: relative;
+		    font-family: papyrus;
+		    height: 650px;
+		    background: url('images/priya.jpg') no-repeat center center;
+		    background-size: cover;
+		    padding: 20px;
+		    padding-top: 120px;
+		    padding-left: 50px;
+		}
+		#certifications a {
+		    color: rgb(128, 255, 255); /* Gold color */
+		    font-weight: bold;
+		    text-decoration: none;
+		    transition: color 0.3s ease-in-out;
+		}
+
+		#certifications a:hover {
+		    color: rgb(255, 128, 255); /* Orange color on hover */
+		}
+
+
+		.experience-overlays {
+		    margin-top: -50px;
+		    position: relative;
+		    z-index: 2;
+		    padding-top: 5px;
+		    border-radius: 230px;
+		    font-family: monaco;
+		    margin-right: 10px;
+		    font-size: 17px;
+		    height: 520px;
+		    animation: pulse 2s infinite;
+		}
+
+		.experience-contents {
+		    display: flex;
+		    flex-direction: column;
+		    gap: 13px;
+		    width: 100%;
+		    max-width: 550px;
+		    margin: 0 auto;
+		}
+
+		.experience-items {
+		    background-color: rgba(0, 0, 0, 0.6);
+		    color: white;
+		    padding: 5px;
+		    border-radius: 5px;
+		}
+
+		#contactme {
+		    position: relative;
+		    font-family: papyrus;
+		    height: 650px;
+		    background: url('images/contact.png') no-repeat center center;
+		    background-size: cover;
+		    padding: 20px;
+		    color: rgb(255, 255, 255);
+		}
+
+		.contact-title {
+		    padding-top: 70px;
+		    text-align: center;
+		    font-size: 36px;
+		    padding-bottom: 20px;
+		}
+
+		.contact-form {
+		    max-width: 600px;
+		    margin: 0 auto;
+		    background: rgb(64, 0, 64);
+		    padding: 20px;
+		    border-radius: 10px;
+		}
+
+		.contact-form .form-group {
+		    margin-bottom: 15px;
+		}
+
+		.contact-form .form-control {
+		    border-radius: 5px;
+		    border: none;
+		    padding: 10px;
+		    width: 100%;
+		}
+
+		.contact-form .btn {
+		    background-color: #f7d8ff;
+		    border: none;
+		    border-radius: 5px;
+		    color: #000;
+		    padding: 10px 20px;
+		    font-size: 16px;
+		    cursor: pointer;
+		}
+
+		.contact-form .btn:hover {
+		    background-color: #e0baff;
+		}
+
+
+
+    </style>
+</head>
+<body>
+    <header class="top">
+        <nav class="navbar">
+            <div class="container-fluid">
+                <div class="col-md-offset-1 col-md-2" style="padding-top:30px;padding-left: 70px;">
+                    <h3 class="brand-name" style="font-family:papyrus;font-size: 30px;">T S PRIYA</h3>
+                </div>
+                <div class="col-md-offset-1 col-md-7">
+                    <ul style="padding-top: 25px;font-size:20px">
+                        <li class="nav-item"><a class="nav-link" href="#">About me</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#internship">Internship</a></li>
+						
+                        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contactme">Contact Me</a></li>
+                    </ul>
+                </div>
+            </div>      
+        </nav>
+          
+		
+		<section class="row1">
+		            <div class="container">
+		                <div class="col-md-offset-2 col-md-8">
+		                    <p class="subtitle" style="font-family:papyrus;padding-top:70px;font-size:25px;"><strong>Hello,</strong></p>
+		                    <h1 class="title" style="font-family:papyrus;padding-top:40px;"><strong>
+		                        I'm <span>Priya<br />a</span> Full-Stack Web Developer</strong>
+		                    </h1>
+		                    <p class="col" style="font-size:20px;padding-top:70px;padding-left:100px;font-family:papyrus;">
+		                        Welcome to my web developer portfolio! I'm Priya TS, a skilled and
+		                        creative web developer using Java, Spring Boot, MySQL, and Bootstrap with a passion for creating beautiful,
+		                        responsive, and user-friendly websites. I've worked on a variety of
+		                        web projects, ranging from personal blogs to food delivery platforms.
+		                    </p>
+		                </div>
+						
+		            </div>
+		        </section>
+
+		
+    </header> 
+	
+	
+	 <section id="internship">
+	 <div class="col-md-8">
+	  <div class="experience-overlay">
+	    <h1 style="font-family:papyrus;color:white"><strong>Internships & Trainings</strong></h1>
+	    <div class="experience-content" style="padding-top:30px">
+	      <div class="experience-item">
+	        <h4>Front-end Developer Trainee, ST WHIZ TECHNOLOGIES</h4>
+	        <ul>
+	          <li><strong>Date:</strong> Mar 2024 - May 2024</li>
+	          <li><strong>Location:</strong> Chennai</li>
+	          <li><strong>Relevant Coursework:</strong> HTML5; CSS3; Bootstrap; Spring Boot</li>
+	        </ul>
+	      </div>
+	      <div class="experience-item">
+	        <h4>Java Programmer Intern, CODSOFT</h4>
+	        <ul>
+	          <li><strong>Date:</strong> Jan 2024 - Feb 2024</li>
+	          <li><strong>Location:</strong> Online</li>
+	          <li><strong>Relevant Coursework:</strong> Core Java; MySQL</li>
+	        </ul>
+	      </div>
+	      <div class="experience-item">
+	        <h4>Inplant Training, ENGINE FACTORY AVADI</h4>
+	        <ul>
+	          <li><strong>Date:</strong> June 2023 - July 2023</li>
+	          <li><strong>Location:</strong> Chennai</li>
+	          <li><strong>Description:</strong>I had a great opportunity to explore the engine mechanisms of armoured vehicles and get hands-on training in the industry and also to develop corporate skills.</li>
+	        </ul>
+	      </div>
+	      
+	    </div>
+	  </div>
+	</div>
+	</section>
+	
+	
+	<section id="skills" >
+		
+	  <div class="col-md-offset-5 col-md-7">
+	  <h1 style="font-family:papyrus;color:white;font-size:45px;padding-left:90px;padding-top:25px"><strong>Skills</strong></h1>
+	    <div class="skills-overlay">
+	      
+	      <div class="skills-content" >
+	        <div class="skill-item">
+	          <h3><strong>Web Development</strong></h3>
+	          <ul style="color:white;">
+	            <li><strong>HTML5       :</strong> <meter value="90" min="0" max="100"></meter></li>
+	            <li><strong>CSS3        :</strong> <meter value="85" min="0" max="100"></meter></li>
+	            <li><strong>Bootstrap   :</strong> <meter value="75" min="0" max="100"></meter></li>
+	          </ul>
+	        </div>
+	        <div class="skill-item">
+	          <h3><strong>Back-End Development</strong></h3>
+	          <ul style="color:white;">
+	            <li><strong>Java        :  </strong> <meter value="85" min="0" max="100"></meter></li>
+				 <li><strong>MySQL       : </strong> <meter value="75" min="0" max="100"></meter></li>
+	            <li><strong>Spring Boot : </strong> <meter value="80" min="0" max="100"></meter></li>
+	           
+	          </ul>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	  
+	</section>
+	
+	
+	
+	<section id="certifications">
+	   <div class="col-md-8">
+	    <div class="experience-overlays">
+	      <h1 style="font-family:papyrus;padding-left:120px;padding-top:15px"><strong>Certifications</strong></h1>
+	      <div class="experience-contents" style="padding-top:30px">
+	        <div class="experience-items">
+	          
+	          <ul>
+	                     <li><a href="https://www.linkedin.com/posts/priyats18122003_programminginjava-elite-activity-7203297283558313984-SnLI?utm_source=share&utm_medium=member_desktop&rcm=ACoAADhxBFABARM5kdYZmoyeh1ATblHVXBOrAK4">NPTEL - Programming in Java (ELITE)</a></li>
+	          <li><a href="https://www.linkedin.com/posts/priyats18122003_vlsiinterconnects-8week-nptel-activity-7141748498613288960-n9kB?utm_source=share&utm_medium=member_desktop&rcm=ACoAADhxBFABARM5kdYZmoyeh1ATblHVXBOrAK4">NPTEL - VLSI Interconnects</a></li> 
+	          </ul>
+	        </div>
+			<div class="experience-items">
+	          <ul>
+	                  <li><a href="https://www.linkedin.com/posts/priyats18122003_bosch-training-workshop-activity-7222969637175488512-Xhil?utm_source=share&utm_medium=member_desktop&rcm=ACoAADhxBFABARM5kdYZmoyeh1ATblHVXBOrAK4" >BOSCH WORKSHOP - Sensors and Actuators</a></li>
+	          </ul>
+	        </div>
+			<div class="experience-items">
+	          <ul>
+	                  <li><a href="https://www.linkedin.com/posts/priyats18122003_epicallayouts-cadence-workshop-activity-7222971070734069760-Ovip?utm_source=share&utm_medium=member_desktop&rcm=ACoAADhxBFABARM5kdYZmoyeh1ATblHVXBOrAK4" >EPICAL LAYOUTS PVT LTD - Cadence Tool Workshop</a></li>
+	          </ul>
+	        </div>
+	        <div class="experience-items">
+
+	          <ul>
+			      <li><a href="https://www.linkedin.com/posts/priyats18122003_springboot-java-webdevelopment-activity-7292228403909341186-Nz60?utm_source=share&utm_medium=member_desktop&rcm=ACoAADhxBFABARM5kdYZmoyeh1ATblHVXBOrAK4">Bootstrap project</a></li>
+			  <li><a href="https://www.linkedin.com/posts/priyats18122003_im-happy-to-share-this-portfolio-website-activity-7229790498482180098-bdKg?utm_source=share&utm_medium=member_desktop&rcm=ACoAADhxBFABARM5kdYZmoyeh1ATblHVXBOrAK4">Front-end portfolio</a></li>
+	           
+	          </ul>
+	        </div>
+	        <div class="experience-items">
+	          <ul>
+	                  <li><a href="https://www.linkedin.com/posts/priyats18122003_javafullstackdev-stwhiztech-oops-activity-7280860176679628801-kRGf?utm_source=share&utm_medium=member_desktop&rcm=ACoAADhxBFABARM5kdYZmoyeh1ATblHVXBOrAK4" >Java fullstack web Developement</a></li>
+	          </ul>
+	        </div>
+	        
+	      </div>
+	    </div>
+		</div>
+	  </section>
+	  
+	  
+	
+	<section id="contactme">
+	  <div class="container">
+	    <h1 class="contact-title" style="color:rgb(64, 0, 0)">Contact Me</h1>
+		
+	    <form th:action="@{/save}" th:method="post"class="contact-form" style="padding-top:30px">
+	      <div class="form-group">
+	        <label for="name">Name:</label>
+	        <input type="text" id="name" name="name" class="form-control" required>
+	      </div>
+	      <div class="form-group">
+	        <label for="email">Email:</label>
+	        <input type="email" id="email" name="email" class="form-control" required>
+	      </div>
+	      <div class="form-group">
+	        <label for="message">Message:</label>
+	        <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+	      </div>
+		  <a th:href="@{/thankyou}"><button type="submit" class="btn btn-primary">Send Message</button></a>
+	      
+	    </form>
+	  </div>
+	</section>
+
+	
+	
+	
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
